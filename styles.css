@@ -26,6 +26,7 @@ background-color: green;
 text-align: center;
 color: black;
 border-bottom-right-radius: 25px;
+font-size: large;
 }
 
 section{
@@ -41,6 +42,12 @@ aside{
     grid-area: aside;
     background-color: rgb(134, 34, 34);
     border-bottom-left-radius: 25px;
+    font-size: large;
+}
+
+aside li{
+    text-align: center;
+    padding: 3%;
 }
 
 @media (max-width: 600px) {
