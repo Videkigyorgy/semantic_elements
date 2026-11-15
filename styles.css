@@ -7,23 +7,40 @@ body{
     grid-template-columns: 1fr 2fr;
     grid-template-areas:    "header header"
                             "aside main"
+                            "section section"
+                            "container container"
                             "footer footer"
 }
 
 header{
     grid-area: header;
-    background-color: blue;
+    background-color: rgb(58, 58, 255);
+    color: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 main{
 grid-area: main;
 background-color: green;
 text-align: center;
+color: black;
+border-bottom-right-radius: 25px;
+}
+
+section{
+    grid-area: section;
+    background-color: lightgreen;
+    text-align: center;
+    margin-top: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 aside{
     grid-area: aside;
     background-color: rgb(134, 34, 34);
+    border-bottom-left-radius: 25px;
 }
 
 @media (max-width: 600px) {
@@ -32,7 +49,15 @@ aside{
         grid-template-areas:    "header"
                                 "main"
                                 "aside"
+                                "section"
+                                "container"
                                 "footer";
+    }
+    main{
+        border-bottom-right-radius: 0px;
+    }
+    aside{
+        border-bottom-right-radius: 25px;
     }
 }
 
@@ -44,8 +69,9 @@ img{
 footer{
     grid-area: footer;
     text-align: center;
-    margin-top: 30px;
     background-color: lightcoral;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 h1{
@@ -69,5 +95,50 @@ a{
 
 footer a{
     text-decoration: none;
-    color: aliceblue;
+    color:rgb(0, 183, 255);
+}
+
+.container{
+    grid-area: container;
+    background-color: lightblue;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+.item1, .item2, .item3, .item4 {
+    background-color: rgb(173, 196, 230);
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+}
+
+.item1 img{
+    width: 40%;
+}
+
+.item2 img{
+    width: 34%;
+}
+
+.item3 img{
+    width: 40%;
+}
+
+.item4 img{
+    width: 37%;
 }
