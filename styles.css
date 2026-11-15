@@ -23,21 +23,22 @@ text-align: center;
 
 aside{
     grid-area: aside;
-    background-color: brown;
+    background-color: rgb(134, 34, 34);
 }
 
-@media(max-width:600px){
-    .grid-layout{
-        grid-template-areas: "header"
-        "aside"
-        "main"
-        "footer";
+@media (max-width: 600px) {
+    .grid_layout{
         grid-template-columns: 1fr;
+        grid-template-areas:    "header"
+                                "main"
+                                "aside"
+                                "footer";
     }
 }
 
+
 img{
-    width: 500px;
+    width: 50%;
 }
 
 footer{
@@ -64,4 +65,9 @@ li{
 a{
     text-decoration: none;
     color: red;
+}
+
+footer a{
+    text-decoration: none;
+    color: aliceblue;
 }
